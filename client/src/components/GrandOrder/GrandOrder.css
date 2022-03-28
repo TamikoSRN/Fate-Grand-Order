@@ -1,0 +1,23 @@
+.background {
+    background-repeat: no-repeat;
+    background: url("../img/RingofLight.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+  }
+  
+  .BB {
+    position: relative;
+    right: 205px;
+    top: 100px;
+  }
+  
+  .text {
+    position: relative;
+    color: black;
+    bottom: 200px;
+    left: 418px;
+    width: 100px;
+  }
+  

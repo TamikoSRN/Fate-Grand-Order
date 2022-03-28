@@ -1,0 +1,96 @@
+.wallpaper {
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background: url("../img/MashuSide.png");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    height: 110px;
+    justify-content: flex-end;
+    width: 100%;
+    background-image: url("../img/ChaldeaWallpaper.png");
+    background-position-y: 1000px;
+    z-index: 100;
+    transition-timing-function: ease-in;
+  }
+  
+  .container h3 {
+    color: rgb(243, 243, 243);
+    font-size: 22px;
+    text-decoration: none;
+    font-family: "Playfair Display", serif;
+  }
+  
+  .commandSpells {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 0.3%;
+    transform: translateX(-50%);
+    width: 18rem;
+  }
+  
+  .commandSpellMale {
+    width: 4.6rem;
+  }
+  
+  .commandSpellFemale {
+    width: 4.6rem;
+  }
+  
+  input {
+    border-color: transparent;
+    padding: 0.45rem 1rem;
+    font-size: 1.2rem;
+  }
+  
+  input:focus {
+    outline: none !important;
+    box-shadow: 0 0 10px hsl(205, 70%, 75%);
+  }
+  
+  input.error {
+    border: 1px solid #ff0000;
+  }
+  
+  .searchInput {
+    margin-right: 1.3rem;
+  }
+  
+  .btn {
+    background: hsl(205, 70%, 75%);
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-color: transparent;
+    text-transform: capitalize;
+    color: #fff;
+    cursor: pointer;
+    border-top-right-radius: 0.35rem;
+    border-bottom-right-radius: 0.1rem;
+  }
+  
+  .btn:active {
+    transform: translateY(0.5px);
+  }
+  
+  /*section 2*/
+  
+  .landingBody {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .chaldeaLogo {
+    width: 7.8rem;
+  }
+  
+  .grandOrderLogo {
+    height: 8rem;
+  }
