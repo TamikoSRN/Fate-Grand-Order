@@ -1,3 +1,17 @@
+// import axios from "axios";
+
+// export const getServants = () => {
+//   return async (dispatch) => {
+//     const response = await axios.get("http://localhost:3000/servants");
+//     if (response?.data) {
+//       dispatch({
+//         type: "GET_SERVANTS",
+//         payload: { servants: response.data },
+//       });
+//     }
+//   };
+// };
+
 export const getServants = () => (dispatch) => {
   return fetch("http://localhost:3000/servants")
     .then((response) => response.json())

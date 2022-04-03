@@ -1,0 +1,16 @@
+.card-container {
+    backdrop-filter: blur(6px);
+    width: 300px;
+    overflow: hidden;
+    transition: 0.3s;
+    animation: ease-in-out;
+    box-shadow: 0px 0px 15px 0px;
+    margin-bottom: 20%;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 0, 0);
+  }
+  
+  .card-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 2px;
+  }

@@ -1,0 +1,27 @@
+.advanceButton{
+    height: 30px;
+    width: 65px;
+    border-radius: 18px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: rgb(255, 255, 255);
+    -webkit-box-reflect: below 5px linear-gradient(transparent, #0002);
+    transition: 0.3s;
+    cursor: pointer;
+    border: transparent;
+    background-color: #000000a2;
+  }
+  
+  .backButton {
+    height: 30px;
+    width: 65px;
+    border-radius: 18px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    color: rgb(255, 255, 255);
+    -webkit-box-reflect: below 5px linear-gradient(transparent, #0002);
+    transition: 0.3s;
+    cursor: pointer;
+    border: transparent;
+    background-color: #000000a2;
+  }

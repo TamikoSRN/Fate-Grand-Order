@@ -1,7 +1,10 @@
 const express = require("express");
+const cors = require("cors")
 const { getServantsInfo } = require("./controllers/servants");
 const router = express();
 const port = 3000;
+
+router.use(cors())
 
 router.get("/servants", async (req, res) => {
   let totalServants = await getServantsInfo();

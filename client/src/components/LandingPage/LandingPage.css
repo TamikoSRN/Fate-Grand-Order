@@ -94,3 +94,13 @@
   .grandOrderLogo {
     height: 8rem;
   }
+
+  .positions {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: relative;
+    margin-top: 130px;
+  }
