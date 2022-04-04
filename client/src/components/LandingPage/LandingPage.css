@@ -98,9 +98,7 @@
   .positions {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    position: relative;
-    margin-top: 130px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 0rem;
+    grid-row-gap: 0rem;
   }

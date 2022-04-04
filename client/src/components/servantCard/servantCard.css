@@ -1,12 +1,11 @@
 .card-container {
     backdrop-filter: blur(6px);
-    height: auto;
-    width: auto;
+    height: 436px;
+    width: 314px;
     overflow: hidden;
     transition: 0.3s;
     animation: ease-in-out;
-    box-shadow: 0px 0px 15px 0px;
-    margin-bottom: 20%;
+    /* box-shadow: 0px 0px 15px 0px; */
     border-radius: 20px;
     border: 2px solid rgb(0, 0, 0);
   }

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { getServants } from "../../store/actions";
 import "./LandingPage.css";
 import Pagination from "../Pagination/Pagination";
+import LoadingScreen from "../Loading/Loading";
 import Card from "../servantCard/servantCard";
 
 import grandOrderLogo from "../img/GrandOrderLogo.png";
@@ -16,7 +17,9 @@ export default function LandingPage() {
   const allServants = useSelector((state) => state.servants);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [servantsPerPage, setServantsPerPage] = useState(8);
+  const [servantsPerPage, setServantsPerPage] = useState(5);
+
+  const [loading, setLoading] = useState(true);
 
   const indexOfLastServant = currentPage * servantsPerPage; // 1*8
   const indexOfFirstServant = indexOfLastServant - servantsPerPage; // 8 - 8
@@ -49,64 +52,72 @@ export default function LandingPage() {
 
   return (
     <>
-      <div className="wallpaper">
-        <section className="container">
-          <div className="commandSpells">
-            <Link to="/">
-              <img src={commandSpellMale} className="commandSpellMale" alt="" />
-            </Link>
-            <Link to="/">
-              <img
-                src={commandSpellFemale}
-                className="commandSpellFemale"
-                alt=""
-              />
-            </Link>
-            <Link to="/" style={{ textDecoration: "none" }}>
-              <h3>Fate/Grand Order APP</h3>
-            </Link>
-          </div>
+      {loading === true ? (
+        <LoadingScreen setLoading={setLoading} />
+      ) : (
+        <div className="wallpaper">
+          <section className="container">
+            <div className="commandSpells">
+              <Link to="/">
+                <img
+                  src={commandSpellMale}
+                  className="commandSpellMale"
+                  alt=""
+                />
+              </Link>
+              <Link to="/">
+                <img
+                  src={commandSpellFemale}
+                  className="commandSpellFemale"
+                  alt=""
+                />
+              </Link>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <h3>Fate/Grand Order APP</h3>
+              </Link>
+            </div>
 
-          <div className="searchInput">
-            <form>
-              <input type="text" placeholder="Summon your servant!" />
-              <button className="btn" type="submit">
-                Summon!
-              </button>
-            </form>
-          </div>
-        </section>
+            <div className="searchInput">
+              <form>
+                <input type="text" placeholder="Summon your servant!" />
+                <button className="btn" type="submit">
+                  Summon!
+                </button>
+              </form>
+            </div>
+          </section>
 
-        <section className="landingBody">
-          <Link to="/">
-            <img src={chaldeaLogo} className="chaldeaLogo" alt="" />
-          </Link>
-          <Link to="/grandOrder">
-            <img src={grandOrderLogo} className="grandOrderLogo" alt="" />
-          </Link>
-        </section>
-        <div className="positions">
-          {currentServants?.map((e) => {
-            return (
-              <Card
-                id={e.id}
-                name={e.name}
-                className={e.className}
-                rarity={e.rarity}
-                lvMax={e.lvMax}
-                extraAssets={e.extraAssets}
-              />
-            );
-          })}
+          <section className="landingBody">
+            <Link to="/">
+              <img src={chaldeaLogo} className="chaldeaLogo" alt="" />
+            </Link>
+            <Link to="/grandOrder">
+              <img src={grandOrderLogo} className="grandOrderLogo" alt="" />
+            </Link>
+          </section>
+          <div className="positions">
+            {currentServants?.map((e) => {
+              return (
+                <Card
+                  id={e.id}
+                  name={e.name}
+                  className={e.className}
+                  rarity={e.rarity}
+                  lvMax={e.lvMax}
+                  extraAssets={e.extraAssets}
+                />
+              );
+            })}
+          </div>
+          <Pagination
+            dogsPerPage={servantsPerPage}
+            allDogs={allServants.length}
+            pagination={pagination}
+            prevPage={prevPage}
+            nextPage={nextPage}
+          />
         </div>
-        <Pagination
-          dogsPerPage={servantsPerPage}
-          allDogs={allServants.length}
-          pagination={pagination}
-          prevPage={prevPage}
-          nextPage={nextPage}
-        />
-      </div>
+      )}
     </>
   );
 }

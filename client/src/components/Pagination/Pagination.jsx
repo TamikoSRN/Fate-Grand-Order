@@ -14,8 +14,10 @@ export default function Pagination ({servantsPerPage, allServants, pagination, p
                     <button onClick={() => pagination(number)} className="Pagination__Button">{number}</button>
                     ))}
             </ul>
+            <div className="buttons">
             <button className="backButton" onClick={prevPage}>Back</button>
             <button className="advanceButton" onClick={nextPage}>Next</button>
+            </div>
         </nav>
     )
 }
