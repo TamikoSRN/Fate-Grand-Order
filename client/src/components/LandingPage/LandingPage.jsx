@@ -94,6 +94,7 @@ export default function LandingPage() {
                 className={e.className}
                 rarity={e.rarity}
                 lvMax={e.lvMax}
+                extraAssets={e.extraAssets}
               />
             );
           })}

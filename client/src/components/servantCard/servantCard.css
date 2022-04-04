@@ -1,6 +1,7 @@
 .card-container {
     backdrop-filter: blur(6px);
-    width: 300px;
+    height: auto;
+    width: auto;
     overflow: hidden;
     transition: 0.3s;
     animation: ease-in-out;
