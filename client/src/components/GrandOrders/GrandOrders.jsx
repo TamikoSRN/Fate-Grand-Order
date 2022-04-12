@@ -1,5 +1,5 @@
 import React from "react";
-import "./GrandOrder.css";
+import "./GrandOrders.css";
 import BB from "../img/BB.png"
 
 export default function GrandOrder() {

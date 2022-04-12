@@ -9,7 +9,7 @@ export default function Pagination ({servantsPerPage, allServants, pagination, p
     }
     return(
         <nav>
-            <ul className="Pagination__ul">
+            <ul className="Pagination_ul">
                 { pageNumbers?.map(number => (
                     <button onClick={() => pagination(number)} className="Pagination__Button">{number}</button>
                     ))}

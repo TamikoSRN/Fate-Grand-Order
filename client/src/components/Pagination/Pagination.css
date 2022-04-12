@@ -1,7 +1,26 @@
+.Pagination_ul{
+  margin-top: 75px;
+}
+
+.Pagination__Button {
+  height: 48px;
+  width: 65px;
+  margin: 1px;
+  border-radius: 17px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  color: rgb(255, 255, 255);
+  -webkit-box-reflect: below 5px linear-gradient(transparent, #0002);
+  transition: 0.3s;
+  cursor: pointer;
+  border: transparent;
+  background-color: #000000a2;
+}
+
 .buttons{
   display: flex;
   justify-content: space-evenly;
-  margin-top: 100px;
+  margin-top: 44px;
 }
 
 .advanceButton{
