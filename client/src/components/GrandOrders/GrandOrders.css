@@ -16,8 +16,11 @@
   .text {
     position: relative;
     color: black;
-    bottom: 200px;
-    left: 418px;
-    width: 100px;
+    bottom: 222px;
+    left: 385px;
+    width: 220px;
+    font-size: 26px;
+    transform: matrix();
+    -webkit-transform: rotate(-5deg);
   }
   

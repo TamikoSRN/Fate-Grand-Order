@@ -1,10 +1,11 @@
 const express = require("express");
-const cors = require("cors")
+const cors = require("cors");
 const { getServantsInfo } = require("./controllers/servants");
+const { getSingularityInfo } = require("./controllers/singularities");
 const router = express();
 const port = 3000;
 
-router.use(cors())
+router.use(cors());
 
 router.get("/servants", async (req, res) => {
   let totalServants = await getServantsInfo();
@@ -23,19 +24,25 @@ router.get("/servants", async (req, res) => {
 });
 
 router.get("/servants/:id", async (req, res) => {
-  const totalServants = await getServantsInfo()
+  const totalServants = await getServantsInfo();
 
-  const { id } = req.params
+  const { id } = req.params;
   if (id) {
-    let servantId = await totalServants.filter((el) => el.id == id)
+    let servantId = await totalServants.filter((el) => el.id == id);
     servantId.length
-    ? res.status(200).send(servantId)
-    : res.status(404).send("Senpai! Your servant wasn't summoned yet!")
+      ? res.status(200).send(servantId)
+      : res.status(404).send("Senpai! Your servant wasn't summoned yet!");
   }
-})
+});
+
+router.get("/GrandOrders", async (req, res) => {
+  const totalSingularities = await getSingularityInfo();
+
+  res.status(200).send(totalSingularities);
+});
 
 router.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
 
-module.exports = router
+module.exports = router;

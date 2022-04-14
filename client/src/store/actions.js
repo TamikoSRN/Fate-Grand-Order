@@ -24,7 +24,7 @@ export const getServants = () => (dispatch) => {
 };
 
 export const getServantsName = (name) => (dispatch) => {
-  return fetch(`https://localhost:3000/servants?name=${name}`)
+  return fetch(`http://localhost:3000/servants?name=${name}`)
     .then((response) => response.json())
     .then((json) => {
       dispatch({
@@ -35,11 +35,22 @@ export const getServantsName = (name) => (dispatch) => {
 };
 
 export const getServantsById = (id) => (dispatch) => {
-  return fetch(`http://localhost:3000/servants/:${id}`)
-    .then((response) => response.json)
+  return fetch(`http://localhost:3000/servants/${id}`)
+    .then((response) => response.json())
     .then((json) => {
       dispatch({
         type: "GET_SERVANTS_ID",
+        payload: json,
+      });
+    });
+};
+
+export const getGrandOrders = () => (dispatch) => {
+  return fetch("http://localhost:3000/GrandOrders")
+    .then((response) => response.json())
+    .then((json) => {
+      dispatch({
+        type: "GET_GRAND_ORDER",
         payload: json,
       });
     });

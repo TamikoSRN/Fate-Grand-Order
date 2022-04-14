@@ -4,7 +4,7 @@ import "./servantCard.css";
 
 export default function Card({ name, className, rarity, lvMax, id, extraAssets }) {
   return (
-    <Link to={"/Servants/" + id}>
+    <Link to={`/servants/${id}`}>
     <div className="card-container">
       {/* <div>
         <h2 className="name">{name}</h2>

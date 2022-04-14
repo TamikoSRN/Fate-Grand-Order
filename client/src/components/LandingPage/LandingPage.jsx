@@ -43,7 +43,7 @@ export default function LandingPage() {
             <Link to="/grandOrders">
               <img src={chaldeaLogo} className="chaldeaLogo" alt="" />
             </Link>
-            <Link to="/Servants">
+            <Link to="/servants">
               <img src={grandOrderLogo} className="grandOrderLogo" alt="" />
             </Link>
           </section>

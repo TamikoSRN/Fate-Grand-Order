@@ -13,7 +13,7 @@ export default function LoadingScreen({ setLoading }) {
       <div className="numerito">
         {setTimeout(() => {
           setLoading(false);
-        }, 2000)}
+        }, 1400)}
       </div>
     </>
   );

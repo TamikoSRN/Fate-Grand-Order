@@ -1,7 +1,8 @@
 const initialState = {
   servants: [],
-  allServants: [],
+  allServant: [],
   servantsId: [],
+  grandOrders: [],
 };
 
 export default function reducer(state = initialState, action) {
@@ -10,7 +11,7 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         servants: action.payload,
-        allServants: action.payload,
+        allServant: action.payload,
       };
     case "GET_SERVANTS_NAME":
       return {
@@ -21,6 +22,11 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         servantsId: action.payload,
+      };
+    case "GET_GRAND_ORDER":
+      return {
+        ...state,
+        grandOrders: action.payload,
       };
     default:
       return state;

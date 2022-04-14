@@ -49,9 +49,7 @@ export default function ServantsPage() {
   };
   return (
     <>
-      {loading === true ? (
-        <LoadingScreen setLoading={setLoading} />
-      ) : (
+      {allServants.length > 0 && loading !== true ? (
         <div className="servantsWallpaper">
           <section className="container">
             <div className="commandSpells">
@@ -109,6 +107,8 @@ export default function ServantsPage() {
             />
           </section>
         </div>
+      ) : (
+        <LoadingScreen setLoading={setLoading} />
       )}
     </>
   );
