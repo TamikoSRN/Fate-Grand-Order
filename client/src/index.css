@@ -6,13 +6,13 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family: "Playfair Display", serif;
   background: hsl(210, 36%, 92%);
   color: rgb(243, 243, 243);
   line-height: 1.5;
   font-size: 0.875rem;
-}
+} */
 
 h3 {
   letter-spacing: 0.1rem;
